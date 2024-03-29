@@ -1,0 +1,29 @@
+/* CSS for custom table */
+.table-div {
+    padding: 20px;
+}
+
+.custom-table {
+    width: 100%; /* Make table take full width of its container */
+    border-collapse: collapse; /* Collapse borders for better styling */
+    table-layout: fixed; /* Fix the table layout to ensure equal column width */
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #f2f2f2; /* Add border to table cells */
+    padding: 8px; /* Add padding to table cells for better readability */
+    word-break: break-word; /* Break long words to fit inside cells */
+}
+
+.custom-table th {
+    background-color: #8e8e8e; /* Add background color to header cells */
+    text-align: center; /* Center-align header text */
+}
+
+.custom-table td {
+    text-align: left; /* Left-align cell content */
+}
+
+.custom-table tbody tr {
+    height: auto; /* Set row height to auto */
+}

@@ -1,0 +1,28 @@
+.collapsible {
+  /* background-color: bisque; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .collapsible-header {
+    background-color: rgb(167, 166, 166);
+    margin-top: 10px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 10px;
+  }
+
+  .collapsible-body {
+    background-color: rgb(219, 219, 219);
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+    border-radius: 10px;
+
+    div {
+        padding: 20px;
+    }
+  }
+}
