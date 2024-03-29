@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route exact path="/" element={<LandingPage />} />
           <Route path="publicnews" element={<PublicNews />} />
           <Route path="tariffavtalen" element={<Tariffavtalen />} />
           <Route path="members" element={<Members />} />
