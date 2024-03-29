@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Projects from "./newBuild/test/Projects";
 import Contact from "./newBuild/contact/Contact";
 import LandingPage from "./firebase/landingPage/fetchLandingPage";
