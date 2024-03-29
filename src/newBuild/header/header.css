@@ -46,6 +46,8 @@
     li a {
         text-decoration: none;
         color: #131313;
+        /* border: 1px solid black; */
+        padding: 1.2vh 5.5vw;
     }
 
     li:hover{
