@@ -12,6 +12,7 @@
     align-items: center;
     padding-left: 20px;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   .collapsible-body {

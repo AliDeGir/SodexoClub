@@ -1,6 +1,8 @@
 import React from "react";
-import './header.css'
-import Navbar from "./navbar";
+// import './header.css'
+// import Navbar from "./navbar";
+
+import BasicExample from "./bootstrapNavbar/bootstrapNavbar";
 
 const Header = () => {
     return (
@@ -9,7 +11,8 @@ const Header = () => {
           <div className="header-logo-div">
             <h1>Welcome!</h1>
           </div>
-          <Navbar />
+          <BasicExample />
+          {/* <Navbar /> */}
           {/* <GetUlData collectionPath="messagesApp/landingPageDb/landingPage" /> */}
           {/* <div className="navbar-div">
             <Link to="/">Home</Link>&nbsp;
