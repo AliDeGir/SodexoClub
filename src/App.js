@@ -6,7 +6,6 @@ import LandingPage from "./firebase/landingPage/fetchLandingPage";
 import Members from "./newBuild/members/Members";
 import PublicNews from "./firebase/publicNews/fetchPublicNews";
 import Header from "./newBuild/header/header";
-import Collapsible from "./newBuild/collapsible/collapsibleFunction";
 import Tariffavtalen from "./newBuild/tariffavtalen/tariffAvtalen";
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <Collapsible />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="publicnews" element={<PublicNews />} />
