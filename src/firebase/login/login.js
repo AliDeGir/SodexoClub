@@ -5,7 +5,6 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import GetUlData from "../modules/getListItems";
 import MemberNews from "../membersNews/fetchMemberNews";
 
 const AuthComponent = () => {
