@@ -5,7 +5,8 @@ import {
     signOut,
     onAuthStateChanged,
 } from "firebase/auth";
-import MemberNews from "../membersNews/fetchMemberNews";
+import FetchList from "../modules/fetchListModule"
+import Chat from "../modules/fetchChatModule";
 
 const AuthComponent = () => {
     const [email, setEmail] = useState("");
@@ -40,31 +41,36 @@ const AuthComponent = () => {
     };
 
     return (
-        <div>
-            {user ? (
-                <div>
-                    <p>Welcome, {user.email}</p>
-                    <MemberNews />
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
-            ) : (
-                <form onSubmit={handleLogin}>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Email"
-                    />
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Password"
-                    />
-                    <button type="submit">Login</button>
-              </form>
-            )}
-        </div>
+      <div>
+        {user ? (
+          <div>
+            <p>Welcome, {user.email}</p>
+            <button onClick={handleLogout}>Logout</button>
+            <Chat />
+            <FetchList
+              collectionPath={"messagesApp/membersNews/membersNewsDB"}
+            />
+
+            {/* <MemberNews /> */}
+          </div>
+        ) : (
+          <form onSubmit={handleLogin}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+            />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+            <button type="submit">Login</button>
+          </form>
+        )}
+      </div>
     );
 };
 
