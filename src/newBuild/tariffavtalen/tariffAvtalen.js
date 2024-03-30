@@ -4,13 +4,13 @@ import './table.css';
 
 const Tariffavtalen = () => {
     return (
-      <>
-        <FetchList
-          collectionPath={"messagesApp/medlemsfordelerDb/medlemsfordeler"}
+        <>
+            <FetchList
+                collectionPath={"messagesApp/medlemsfordelerDb/medlemsfordeler"}
             />
             <FetchList collectionPath={"messagesApp/riksavtalenDb/riksavtalen"} />
             <TableComponent />
-      </>
+        </>
     );
 }
 

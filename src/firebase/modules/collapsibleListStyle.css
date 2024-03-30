@@ -1,33 +1,55 @@
 .collapsible {
-  /* background-color: bisque; */
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-
-  .collapsible-header {
-    background-color: rgb(167, 166, 166);
-    margin-top: 10px;
-    height: 5vh;
+    margin: 20px;
+    padding-bottom: 20px;
     display: flex;
-    align-items: center;
-    padding-left: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-  }
+    flex-direction: column;
 
-  .collapsible-body {
-    background-color: rgb(219, 219, 219);
-    height: 0;
-    overflow: hidden;
-    transition: height .5s;
-    border-radius: 10px;
-
-    div {
-        padding: 20px;
+    .collapsible-header {
+        background-color: rgb(167, 166, 166);
+        margin-top: 10px;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        border-radius: 10px;
+        cursor: pointer;
     }
 
-    p a {
-      text-decoration: none;
+    .collapsible-body {
+        background-color: rgb(196, 196, 196);
+        height: 0;
+        overflow: hidden;
+        transition: height .5s;
+        border-radius: 10px;
+        margin: 0 2px;
+        line-height: 1.2;
+
+        div {
+            padding: 20px;
+        }
+
+        ul li {
+            padding-bottom: 10px;
+        }
+
+        p a {
+            text-decoration: none;
+            color: rgb(5, 15, 103);
+        }
+
+        ul li:hover {
+            a {
+                color: red;
+                font-weight: 700;
+            }
+        }
+
     }
-  }
+}
+
+
+@media screen and (max-width: 960px) {
+    .collapsible-header {
+        font-size: 14px;
+    }
 }

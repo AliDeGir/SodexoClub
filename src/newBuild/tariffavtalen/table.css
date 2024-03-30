@@ -1,16 +1,19 @@
 /* CSS for custom table */
 .table-div {
-    padding: 20px;
+    /* padding: 20px; */
+    margin: 20px;
+    padding-bottom: 60px;
 }
 
 .custom-table {
     width: 100%; /* Make table take full width of its container */
     border-collapse: collapse; /* Collapse borders for better styling */
     table-layout: fixed; /* Fix the table layout to ensure equal column width */
+    font-size: 13px;
 }
 
 .custom-table th, .custom-table td {
-    border: 1px solid #f2f2f2; /* Add border to table cells */
+    border: 1px solid #909090; /* Add border to table cells */
     padding: 8px; /* Add padding to table cells for better readability */
     word-break: break-word; /* Break long words to fit inside cells */
 }

@@ -1,0 +1,15 @@
+.footer-div {
+    height: 3vh;
+    width: 100vw;
+    background: linear-gradient(319deg, rgba(45,44,44,1) 0%, rgba(74,74,74,1) 50%, rgba(70,70,70,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: fixed;
+
+
+    p {
+        color: #fff;
+    }
+}

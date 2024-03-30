@@ -1,4 +1,9 @@
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.app-div {
+    background: linear-gradient(133deg, rgba(190,189,189,1) 0%, rgba(221,221,221,1) 50%, rgba(235,235,235,1) 100%);
+    min-height: 100vh;
 }
