@@ -6,6 +6,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [commentInput, setCommentInput] = useState("");
   const [aliasInput, setAliasInput] = useState("");
+  const [storedAlias, setStoredAlias] = useState("");
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -41,21 +42,35 @@ const Chat = () => {
     fetchMessages();
   }, []);
 
+  useEffect(() => {
+    const storedAlias = localStorage.getItem("alias");
+    if (storedAlias) {
+      setStoredAlias(storedAlias);
+      setAliasInput("");
+    }
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (commentInput.trim() !== "" && aliasInput.trim() !== "") {
+    if (commentInput.trim() !== "") {
       try {
         const uid = auth.currentUser.uid;
+        const alias = storedAlias || aliasInput;
         const doqref = await addDoc(
           collection(db, "messagesApp/messages/messagesDB"),
           {
             content: commentInput,
             timeStamp: Date.now(),
             userId: uid,
-            alias: aliasInput,
+            alias: alias,
           }
         );
         setCommentInput("");
+        if (!storedAlias) {
+          localStorage.setItem("alias", alias);
+          setStoredAlias(alias);
+          setAliasInput("");
+        }
       } catch (error) {
         console.error("Error adding message:", error);
       }
@@ -63,7 +78,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="chat-div">
+    <div>
       <div className="message-container">
         {messages.map((message) => (
           <div
@@ -93,13 +108,17 @@ const Chat = () => {
       </div>
       <div className="chatSubmit">
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={aliasInput}
-            onChange={(e) => setAliasInput(e.target.value)}
-            placeholder="Your Alias"
-            required
-          />
+          {storedAlias ? (
+            <input type="hidden" value={storedAlias} />
+          ) : (
+            <input
+              type="text"
+              value={aliasInput}
+              onChange={(e) => setAliasInput(e.target.value)}
+              placeholder="Your Alias"
+              required
+            />
+          )}
           <textarea
             value={commentInput}
             onChange={(e) => setCommentInput(e.target.value)}
