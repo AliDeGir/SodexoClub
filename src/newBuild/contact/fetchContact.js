@@ -51,101 +51,112 @@ const FetchContact = () => {
 
   return (
     <div className="contact-div">
-      <div className="contact-card">
-        <div className="contact-photo">
-          {photoUrls[0] ? (
-            <img src={photoUrls[0]} alt={`Photo 1`} />
-          ) : (
-            "No photo"
-          )}
-        </div>
-        <div className="contact-info">
-          <h4>{contactData[0] && contactData[0].id}</h4>
-          <p>
-            {contactData[0] && contactData[0].data.title}
-            <br />
-            <span
-              dangerouslySetInnerHTML={{
-                __html: contactData[0] && contactData[0].data.phone,
-              }}
-            />
-            <br />
-            <span
-              dangerouslySetInnerHTML={{
-                __html: contactData[0] && contactData[0].data.email,
-              }}
-            />
-            <br />
-            <span
+      <div className="contact-card-div">
+        <div className="contact-card">
+          <div className="contact-photo">
+            {photoUrls[0] ? (
+              <img src={photoUrls[0]} alt={`Photo 1`} />
+            ) : (
+              "No photo"
+            )}
+          </div>
+          <div className="contact-info">
+            <h4>{contactData[0] && contactData[0].id}</h4>
+            <p>
+              {contactData[0] && contactData[0].data.title}
+              <br />
+              <br />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: contactData[0] && contactData[0].data.phone,
+                }}
+              />
+              <br />
+              <br />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: contactData[0] && contactData[0].data.email,
+                }}
+              />
+              <br />
+              {/* <span
               dangerouslySetInnerHTML={{
                 __html: contactData[0] && contactData[0].data.links,
               }}
-            />
-            <br />
-          </p>
+            /> */}
+              <br />
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="contact-card">
-        <div className="contact-photo">No photo</div>
-        <div className="contact-info">
-          <h4>{contactData[2] && contactData[2].id}</h4>
-          <p>
-            {contactData[2] && contactData[2].data.title}
-            <br />
-            <span
-              dangerouslySetInnerHTML={{
-                __html: contactData[2] && contactData[2].data.phone,
-              }}
-            />
-            <br />
-            <span
-              dangerouslySetInnerHTML={{
-                __html: contactData[2] && contactData[2].data.email,
-              }}
-            />
-            <br />
-            <span
+        <div className="contact-card">
+          <div className="contact-photo">No photo</div>
+          <div className="contact-info">
+            <h4>{contactData[2] && contactData[2].id}</h4>
+            <p>
+              {contactData[2] && contactData[2].data.title}
+              <br />
+              <br />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: contactData[2] && contactData[2].data.phone,
+                }}
+              />
+              <br />
+              <br />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: contactData[2] && contactData[2].data.email,
+                }}
+              />
+              <br />
+              {/* <span
               dangerouslySetInnerHTML={{
                 __html: contactData[2] && contactData[2].data.links,
               }}
-            />
-            <br />
-          </p>
+            /> */}
+              <br />
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="contact-card">
-        <div className="contact-photo">
-          {photoUrls[1] ? (
-            <img src={photoUrls[1]} alt={`Photo 2`} />
-          ) : (
-            "No photo"
-          )}
-        </div>
-        <div className="contact-info">
-          <h4>{contactData[1] && contactData[1].id}</h4>
-          <p>
-            {contactData[1] && contactData[1].data.title}
-            <br />
-            <span
-              dangerouslySetInnerHTML={{
-                __html: contactData[1] && contactData[1].data.phone,
-              }}
-            />
-            <br />
-            <span
-              dangerouslySetInnerHTML={{
-                __html: contactData[1] && contactData[1].data.email,
-              }}
-            />
-            <br />
-            <span
+        <div className="contact-card">
+          <div className="contact-photo">
+            {photoUrls[1] ? (
+              <img src={photoUrls[1]} alt={`Photo 2`} />
+            ) : (
+              "No photo"
+            )}
+          </div>
+          <div className="contact-info">
+            <h4>{contactData[1] && contactData[1].id}</h4>
+            <p>
+              {contactData[1] && contactData[1].data.title}
+              <br />
+              <br />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: contactData[1] && contactData[1].data.phone,
+                }}
+              />
+              <br />
+              <br />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: contactData[1] && contactData[1].data.email,
+                }}
+              />
+              <br />
+              {/* <span
               dangerouslySetInnerHTML={{
                 __html: contactData[1] && contactData[1].data.links,
               }}
-            />
-            <br />
-          </p>
+            /> */}
+              <br />
+            </p>
+          </div>
         </div>
+      </div>
+      <div className="forbund">
+        <p>Her kommer det snart kontakt info</p>
       </div>
     </div>
   );
