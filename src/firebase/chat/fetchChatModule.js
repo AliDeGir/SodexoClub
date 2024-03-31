@@ -1,6 +1,7 @@
 import { db, auth } from "../config";
 import { collection, getDocs, onSnapshot, addDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
+import "./chat.css"
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -78,13 +79,15 @@ const Chat = () => {
   };
 
   return (
-    <div>
-      <div className="message-container">
+    <div className="chat-div">
+      <div className="chat-display">
         {messages.map((message) => (
           <div
             key={message.id}
             style={{
-              marginLeft: message.isCurrentUser ? "auto" : "0",
+              marginLeft: message.isCurrentUser ? "32%" : "3%",
+              marginTop: "10px",
+              marginBottom: "10px",
               backgroundColor: message.isCurrentUser
                 ? "rgb(157, 198, 255)"
                 : "rgb(144, 226, 125)",
@@ -101,12 +104,12 @@ const Chat = () => {
               <span style={{ color: "rgb(148, 122, 54)" }}>
                 {message.alias}:{" "}
               </span>
-              <i>{message.content}</i>
+              <i style={{fontSize: "14px"}}>{message.content}</i>
             </div>
           </div>
         ))}
       </div>
-      <div className="chatSubmit">
+      <div className="chat-submit-div">
         <form onSubmit={handleSubmit}>
           {storedAlias ? (
             <input type="hidden" value={storedAlias} />

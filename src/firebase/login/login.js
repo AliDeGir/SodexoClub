@@ -6,7 +6,7 @@ import {
     onAuthStateChanged,
 } from "firebase/auth";
 import FetchList from "../modules/fetchListModule"
-import Chat from "../modules/fetchChatModule";
+import Chat from "../chat/fetchChatModule";
 
 const AuthComponent = () => {
     const [email, setEmail] = useState("");
