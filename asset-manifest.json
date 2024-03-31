@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SodexoClub/static/css/main.56719501.css",
+    "main.js": "/SodexoClub/static/js/main.da8d8f65.js",
+    "index.html": "/SodexoClub/index.html",
+    "main.56719501.css.map": "/SodexoClub/static/css/main.56719501.css.map",
+    "main.da8d8f65.js.map": "/SodexoClub/static/js/main.da8d8f65.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56719501.css",
+    "static/js/main.da8d8f65.js"
+  ]
+}
