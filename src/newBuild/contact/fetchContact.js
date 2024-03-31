@@ -1,6 +1,7 @@
-import { db } from "../config";
+import { db } from "../../firebase/config";
 import { useState, useEffect } from "react";
 import { getDocs, collection, doc, getDoc } from "firebase/firestore";
+import './contact.css'
 
 const FetchContact = () => {
   const [contactData, setContactData] = useState([]);
@@ -63,11 +64,23 @@ const FetchContact = () => {
           <p>
             {contactData[0] && contactData[0].data.title}
             <br />
-            {contactData[0] && contactData[0].data.phone}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[0] && contactData[0].data.phone,
+              }}
+            />
             <br />
-            {contactData[0] && contactData[0].data.email}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[0] && contactData[0].data.email,
+              }}
+            />
             <br />
-            {contactData[0] && contactData[0].data.links}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[0] && contactData[0].data.links,
+              }}
+            />
             <br />
           </p>
         </div>
@@ -79,11 +92,23 @@ const FetchContact = () => {
           <p>
             {contactData[2] && contactData[2].data.title}
             <br />
-            {contactData[2] && contactData[2].data.phone}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[2] && contactData[2].data.phone,
+              }}
+            />
             <br />
-            {contactData[2] && contactData[2].data.email}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[2] && contactData[2].data.email,
+              }}
+            />
             <br />
-            {contactData[2] && contactData[2].data.links}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[2] && contactData[2].data.links,
+              }}
+            />
             <br />
           </p>
         </div>
@@ -101,11 +126,23 @@ const FetchContact = () => {
           <p>
             {contactData[1] && contactData[1].data.title}
             <br />
-            {contactData[1] && contactData[1].data.phone}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[1] && contactData[1].data.phone,
+              }}
+            />
             <br />
-            {contactData[1] && contactData[1].data.email}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[1] && contactData[1].data.email,
+              }}
+            />
             <br />
-            {contactData[1] && contactData[1].data.links}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contactData[1] && contactData[1].data.links,
+              }}
+            />
             <br />
           </p>
         </div>
